@@ -1,0 +1,4 @@
+*.pyc
+.coverage
+db.sqlite3
+htmlcov/

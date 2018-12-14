@@ -34,7 +34,16 @@ class Form extends React.Component {
       )
   };
 
-  //TODO: Implement Form RESET button
+  handleReset = () => {
+    this.setState({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
+
   render() {
     return (
       <div className="column">
@@ -103,9 +112,12 @@ class Form extends React.Component {
               />
             </div>
           </div>
-          <div className="control">
+          <div className="form-actions btn-group">
             <button type="submit" className="button is-info">
               Send Message
+            </button>
+            <button type="button" className="button" onClick={this.handleReset}>
+              Reset Form
             </button>
           </div>
         </form>
